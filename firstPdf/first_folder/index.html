@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Tasks</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h2>Data Types and Operators</h2>
+      <select id="calculationType" onchange="updateInputs()">
+        <option value="cashFlow">Cash Flow Ratio</option>
+        <option value="netIncome">Net Income</option>
+        <option value="totalAssets">Total Assets</option>
+        <option value="netIncomeMargin">
+          Net Income (Profit Margin & Sales)
+        </option>
+        <option value="average">Average</option>
+        <option value="discount">Discount</option>
+        <option value="ageLimit">Age Limit (18-30)</option>
+        <option value="exponential">Exponential</option>
+        <option value="remainder">Remainder</option>
+      </select>
+
+      <div id="inputFields"></div>
+
+      <div class="output" id="output">Result:</div>
+      <button onclick="calculate()">Calculate</button>
+    </div>
+
+    <div class="card2">
+      <h2>expressions Output</h2>
+
+      <select id="expressionsOutput" onchange="updateInputs2()">
+        <option value="" disabled selected>Choose an option</option>
+        <option value="typeof(100)">typeof(100)</option>
+        <option value="typeof(73.9)">typeof(73.9)</option>
+        <option value="typeof(NaN)">typeof(NaN)</option>
+        <option value='typeof("Water")'>typeof("Water")</option>
+        <option value="typeof(false)">typeof(false)</option>
+        <option value="typeof(9 != 11)">typeof(9 != 11)</option>
+        <option value='"Orang" + "e"'>"Orang" + "e"</option>
+        <option value='"Orange" - "s"'>"Orange" - "s"</option>
+        <option value='"4" + "8"'>"4" + "8"</option>
+        <option value='"4" - "8" '>"4" - "8"</option>
+        <option value='"name" + 3'>"name" + 3</option>
+        <option value='"name" - 3 '>"name" - 3</option>
+        <option value='82 * "word"'>82 * "word"</option>
+        <option value='1 + "hello"'>1 + "hello"</option>
+        <option value='"hello" + 1'>"hello" + 1</option>
+        <option value="1 + true">1 + true</option>
+        <option value='"hello" + true'>"hello" + true</option>
+        <option value="typeof (Infinity)">typeof (Infinity)</option>
+        <option value="1 == '1' ">1 == '1'</option>
+        <option value="1 === '1' ">1 === '1</option>
+      </select>
+      <div class="output2" id="output2">Log:</div>
+      <button id="btn2" onclick="log()">Log:</button>
+    </div>
+
+    <div class="card3">
+      <h2>String manipulation</h2>
+      <select id="StringManipulation" onchange="updateInputs3()">
+        <option value="" disabled selected>Choose an string</option>
+        <option value="WELCOME_TO_ORANGE">WELCOME TO ORANGE</option>
+        <option value="TO">To</option>
+        <option value="Hello_from_Orange">Hello from Orange</option>
+        <option value="welcome_to_orange">welcome to orange</option>
+        <option value="17">17</option>
+        <option value="Welcome_to_“Orange”">Welcome to “Orange”</option>
+        <option value="Welcome_to_Orange_Jordan">
+          Welcome to Orange Jordan
+        </option>
+      </select>
+      <div class="output3" id="output3">Welcome to Orange</div>
+      <button onclick="stringManipulate()">Manipulate</button>
+    </div>
+
+    <div class="card3">
+      <h2>Arrays</h2>
+      <select id="arraysManipulation" onchange="updateInputs4()">
+        <option value="" disabled selected>Choose an Output</option>
+        <option value="push()">
+          [“Coding”, “Academy”, “By”, “Orange”, “Jordan”]
+        </option>
+        <option value="splice()">: [“Coding”, “Academy”]</option>
+        <option value="unshift()">
+          [“Welcome”, “To”, “Coding”, “Academy”, “By”, “Orange”]
+        </option>
+        <option value="shift()">: [“Academy”, “By”, “Orange”]</option>
+        <option value="join()">"Coding Academy By Orange"</option>
+        <option value="same">[“Coding”, “Academy”, “By”, “Orange”]</option>
+
+        <option value="slice()">[“Coding”, “Orange”]</option>
+      </select>
+      <div class="output4" id="output4">
+        [“Coding”, “Academy”, “By”, “Orange”]
+      </div>
+      <button onclick="arraysManipulation()">Manipulate</button>
+    </div>
+
+    <a href="../without_DOM/without_DOM.html" id="link"
+      >Other Tasks without DOM
+    </a>
+
+    <script src="index.js"></script>
+  </body>
+</html>
