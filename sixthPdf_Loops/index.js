@@ -80,8 +80,61 @@ for (let i = arr.length-1;i>=0;i--)
     console.log(arr[i]);
     
 
+
 console.log("12. Use a for loop to print the elements of an array with a specific step");
 let step = 2; 
 for (let i = 0; i < arr.length; i += step) {
     console.log(arr[i]); 
 }
+
+
+
+console.log("13. Use a for loop to find the frequency of a number in an array");
+
+let array = [1, 2, 1, 3, 2, 1]; 
+let numberToFind = 1; 
+let frequency = 0; 
+for (let i = 0; i < array.length; i++) {
+    if (array[i] === numberToFind) {
+        frequency++;
+    }
+}
+console.log(`The frequency of ${numberToFind} is ${frequency}`);
+
+
+
+
+// 14.Use the .map() method on the heroes array to return a new array.
+// ● The new array should rename the 'name' key to 'hero'.
+// ● The 'name' key should not appear in the new array.
+// ● The new array should have a new key added called (id).
+// ● The key 'id' should be based on the index
+
+const heroes = [
+    {name: 'Iron Man', power: 'Tech'},
+    {name: 'Spider-Man', power: 'Spider abilities'},
+    {name: 'Thor', power: 'Godly powers'},
+    {name: 'Hulk', power: 'Super strength'}
+    ]
+    
+    const heroesWithId = heroes.map((hero,index)=>{return {hero:hero.name,power:hero.power,id:index}})
+    console.log(heroesWithId);
+    
+    
+// 15.Write a JavaScript function that takes in the array "input Words" as an argument, and
+// using the filter method, it returns a new array containing only the elements that have more
+// than 7 characters and return the new Array
+const inputWords = ["spray", "limit", "elite", "exuberant", "destruction", "present"];
+const filteredInputWords = inputWords.filter((e)=>{return e.length>=7})
+console.log(filteredInputWords);
+
+
+
+// 16. Starting with an array containing the numbers 1 through 10, use reduce to produce for the
+// following. Use console.log to display the results.
+// ● The sum of the following: square the numbers divisible by 5
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sumSquaredDivisibleBy5 = numbers.reduce((acc,num)=>
+                             num%5 === 0 ? acc+Math.pow(num,2) : acc , 0);
+console.log(sumSquaredDivisibleBy5);
