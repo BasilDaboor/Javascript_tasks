@@ -112,3 +112,57 @@ function countsCharacter(str){
 
 console.log(countsCharacter("Coding Academy by Orange"));
 
+// 9. Write for loops that accomplish the following tasks:
+// a. Print the numbers 0 - 20, one number per line.
+for (let i = 0; i <= 20; i++) {
+    console.log(i);
+}
+
+console.log("------------");
+
+// b. Print only the ODD values from 3 - 29, one number per line.
+for (let i = 3; i <= 29; i += 2) {  // Increment by 2 to get only odd numbers
+    console.log(i);
+}
+
+console.log("------------");
+
+// c. Print the EVEN numbers 12 down to -14 in descending order, one number per line.
+for (let i = 12; i >= -14; i -= 2) {  // Decrement by 2 to get even numbers
+    console.log(i);
+}
+
+console.log("------------");
+
+// d. Print the numbers 50 down to 20 in descending order, but only if they are multiples of 3.
+for (let i = 50; i >= 20; i--) {
+    if (i % 3 === 0) {  // Check if it's a multiple of 3
+        console.log(i);
+    }
+}
+
+
+
+// 11. Construct a for loop that sorts the array [7, 23, 18, 9, -13, 38, -10, 12, 0, 124] into two new
+// arrays:
+// Dene an empty evens array to hold the even numbers and an odds array for the odd numbers.
+// In the loop, determine if each number is even or odd, then put that number into evens or odds, as
+// appropriate.
+
+
+let numbers = [7, 23, 18, 9, -13, 38, -10, 12, 0, 124]; 
+let evens = []; 
+let odds = [];  
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {  
+        evens.push(numbers[i]); 
+    } else {
+        odds.push(numbers[i]);  
+    }
+}
+
+console.log("Even Numbers:", evens); 
+
+console.log("Odd Numbers:", odds);  
+
